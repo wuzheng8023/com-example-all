@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>web-course</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>experiment-01</module>
+        <module>experiment-02</module>
+        <module>experiment-03</module>
+        <module>experiment-04</module>
+        <module>homework</module>
+        <module>experiment-05</module>
+        <module>homework-01</module>
+        <module>homework-02</module>
+        <module>homework-03</module>
+        <module>homework-04</module>
+        <module>homework-05</module>
+    </modules>
+
+
+</project>

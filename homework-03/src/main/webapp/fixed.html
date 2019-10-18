@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        /*样式*/
+        /*全局box计算模式*/
+        /*全局弹性容器，即将导航与主内容容器横向并列*/
+        /*左导航容器，显示声明宽度，窗口高度，固定。即，当内容长度超过一屏可滚动时，左导航不动*/
+        /*右侧主区域容器，占用除左导航外的最大*/
+
+        /*由于左侧导航按固定布局，因此，在计算尺寸时不会计算。
+        即，此时弹性容器计算尺寸时，内部仅有一个主容器。
+        因此，主区域容器布局时，用margin据左计算出左导航的距离，从而避免导航压住内容区域*/
+        /*item容器，中内容居中，即超链接居中*/
+        /*超链接导航，内边距撑开，可点击范围为全部item等*/
+        /*Google图标，为Google图标创建一个自定义样式类，声明图标的颜色/尺寸样式*/
+        /*Google图标库基于文本声明，因此图标的颜色/尺寸等是基于文本的属性*/
+        /*当悬浮在item，item向上移动5px，添加渐进效果。即，当悬浮时，有图标向上跳一下的效果*/
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main{
+            border: 1px solid red;
+            padding: 15px;
+            display: flex;
+            height: 500px;
+
+        }
+        .navigation{
+            display: grid;
+            grid-auto-columns: auto;
+            width: 50px;
+            height: 50%;
+            border: 1px solid red;
+            background: #4557ff;
+            justify-content: center;
+            padding: 10px;
+
+        }
+        .text{
+            border: 1px solid black;
+            padding: 15px 15px 15px 15px;
+            overflow: auto;
+            width: max-content;
+            height: 90%;
+        }
+
+        .item{
+            display: block;
+            transition: transform 1s;
+        }
+
+        .item i {
+            color: white;
+
+        }
+
+        .item i:hover{
+            transform: translateY(-5px);
+        }
+
+        .item a {
+            display: block;
+        }
+
+
+    </style>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!--原理与思路-->
+<!--布局-->
+<!--声明全局容器-->
+<!--声明导航容器-->
+<!--导航容器中，声明放置图标的item容器-->
+<!--item容器中声明超链接，超链接内容为icon-->
+<!--声明复制若干item容器-->
+<!--声明主容器-->
+<!--主容器中声明段落-->
+
+<div class="main">
+    <div class="navigation">
+
+        <div class="item">
+            <a href="">  <i class="material-icons">3d_rotation</i></a>
+
+        </div>
+
+        <div class="item">
+            <a href=""><i class="material-icons">accessibility</i></a>
+        </div>
+
+        <div class="item">
+            <a href=""><i class="material-icons">access_alarm</i></a>
+        </div>
+
+    </div>
+
+    <div class="text">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <!--            <br>-->
+        Ab aliquid asperiores consequuntur doloribus est explicabo laboriosam,
+        <!--            <br>-->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, quis, ut! Doloremque illo illum magnam optio provident quibusdam quos? Ab amet asperiores commodi dolor excepturi maiores molestiae nesciunt officiis totam vitae? Amet doloremque eligendi error hic maiores soluta tenetur vel! Autem cum earum eveniet facere harum magni, minus molestias necessitatibus non quos repudiandae sunt tempora tempore tenetur unde! Accusantium consectetur dignissimos enim excepturi odit quisquam quos reprehenderit rerum sapiente temporibus. A ab ad at atque culpa debitis, distinctio doloremque dolorum exercitationem facere fugiat in minima mollitia nemo numquam obcaecati optio quae quibusdam, quis quos rem, unde voluptate. Consectetur corporis eaque esse id illo ipsa iste itaque non odit quis? Debitis, doloribus harum nihil non quasi voluptatibus! Ad adipisci architecto blanditiis commodi deserunt dolores, enim eos eveniet id illo incidunt inventore magni minima modi nam necessitatibus neque nobis obcaecati perferendis porro possimus, quaerat quod repellendus sit vel veritatis voluptates voluptatibus? A accusantium aperiam aspernatur aut corporis debitis dicta distinctio enim, iste itaque natus numquam odit quisquam temporibus voluptatum. Ad beatae delectus deserunt dolores eius facilis fuga hic, ipsam iste modi molestias mollitia necessitatibus non nulla obcaecati officia officiis possimus quia ratione repellendus sunt suscipit totam, vero vitae voluptas voluptate voluptatum! Animi consectetur culpa delectus dignissimos exercitationem fugit incidunt iste, mollitia nesciunt qui quibusdam reiciendis rerum similique unde vitae! Aliquam autem eum ipsum porro quo sequi temporibus. Adipisci amet at beatae deserunt incidunt, iste itaque obcaecati provident ut velit? Ab esse incidunt maxime nemo quae saepe voluptate. Assumenda corporis cupiditate ea et magnam minus necessitatibus nihil, nisi reiciendis saepe soluta ullam voluptates. Alias dolores qui suscipit voluptates. A aspernatur cumque delectus dolor dolorum esse eveniet facilis inventore, nulla officia officiis porro repudiandae sit voluptas voluptate? Est iusto nobis possimus repellendus voluptas? Ab deserunt ea earum, id modi quam quo! Architecto atque commodi doloribus est ex inventore magnam minima molestiae mollitia, nesciunt non obcaecati quam quis rem reprehenderit tempore totam. Aliquid, animi illum numquam obcaecati officia vero. Architecto atque ea eveniet magni numquam. Aspernatur consequuntur error ipsam quas ratione sunt vitae. Aspernatur consectetur, cum debitis id ipsum minus non reprehenderit sequi temporibus veritatis. Cumque doloribus facere facilis in molestias perspiciatis quaerat quas vel, vero. Adipisci beatae cumque dolorem error ex inventore, neque nihil, non nostrum optio perspiciatis quaerat quam sapiente sint voluptates. Alias aperiam atque aut, dicta ea et eum hic laudantium maxime necessitatibus nesciunt officia possimus quam quas qui? Aperiam aspernatur atque, culpa cumque dolorum illo iste libero nostrum nulla quae quasi soluta unde velit. Asperiores, debitis dicta dolor earum eius eos optio qui rem tempore vitae. Asperiores beatae ducimus iusto nostrum quaerat quasi repudiandae similique! Ad adipisci molestiae neque nihil quas quisquam. Dignissimos magnam pariatur vero! Distinctio hic non perspiciatis quae reiciendis sequi voluptate voluptates! Architecto commodi corporis cumque eius esse itaque natus, optio saepe sequi vel! Facere fuga, quam? Ad aliquid, animi inventore ipsa obcaecati officiis quis reiciendis similique unde vero. Consectetur dolore numquam odio voluptates. Adipisci aliquid corporis debitis eligendi harum impedit optio quasi soluta suscipit! Deserunt repudiandae, voluptates!
+
+    </div>
+</div>
+
+</body>
+</html>
