@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+
+
+    <style>
+
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
+        table,th,td,tr{
+            text-align: center;
+            padding: 10px;
+        }
+      table{
+         border-collapse: collapse;
+          width: 100%;
+          /*border: none;*/
+
+      }
+      table,tr,td,th{
+          border: none;
+      }
+
+        td,th{
+          border-bottom: 1px solid #dddddd;
+        }
+        tbody tr:nth-child(odd){
+             background-color: rgba(23, 178, 191, 0.1);
+         }
+
+        span{
+            color: white;
+            border-collapse: collapse;
+            border-radius: 3px;
+            padding: 0 5px;
+        }
+
+        a.link-button{
+            border-radius: 8px;
+            color: white;
+            background: #f44336;
+            padding: 8px 6px;
+            margin: 5px;
+            text-decoration: none;
+            opacity: 1;
+            box-shadow: 3px 3px 5px gray;
+        }
+
+        a.link-button:hover{
+            background: #f44336;
+            opacity: 0.5;   /*不透明度*/
+        }
+
+        nav.sidebar{
+            /*display: block;*/
+            width: 150px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #dddddd;
+            color: white;
+
+        }
+
+        nav.sidebar li a {
+            display: block;
+            color: black;
+            text-decoration: none;
+
+        }
+
+
+        nav.sidebar h3{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: #56abff;
+        }
+        nav.sidebar li a:hover{
+            color: white;
+            background-color: #61e1ff;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center">学生信息</h2>
+<br>
+<pr>说明：以下为2010级学生名单，共4人，<span style="background-color: green">成功加载3人</span>。<span style="background-color: orangered">警告:列表不包含降级学生</span>。</pr>
+<br>
+<table border="1">
+    <thead>
+    <th>#</th>
+    <th>姓名</th>
+    <th>班级</th>
+    <th>Email</th>
+    <th>操作</th>
+
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>郭立新</td>
+        <td>软件工程2010级软件1班</td>
+        <td>guo@example.com</td>
+        <td><a href="" class="link-button">修改</a> <a href="" class="link-button">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>黄英</td>
+        <td>软件工程2010级软件1班</td>
+        <td>huang@example.com</td>
+        <td><a href="" class="link-button">修改</a> <a href="" class="link-button">删除</a></td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>吕惠玲</td>
+        <td>软件工程2010级软件2班</td>
+        <td>lv@example.com</td>
+        <td><a href="" class="link-button">修改</a> <a href="" class="link-button">删除</a></td>
+    </tr>
+
+    </tbody>
+
+</table>
+<br>
+<nav class="sidebar">
+    <h3>云技术管理</h3>
+    <ul>
+        <li><a href="#">云服务器</a></li>
+        <li><a href="#">云数据库</a></li>
+        <li><a href="#">负载均衡</a></li>
+    </ul>
+</nav>
+
+
+</body>
+</html>
