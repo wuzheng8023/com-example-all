@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业五模态框</title>
+
+<!--        通过将-->
+    <style>
+        /**{*/
+        /*    margin: 0;*/
+        /*    padding: 0;*/
+        /*    box-sizing: border-box;*/
+        /*}*/
+
+
+        .model {
+            padding: 10px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            width: 500px;
+            height: 200px;
+            margin-left: -200px;
+            margin-top: -200px;
+            z-index: 100;
+            background: white;
+            border-radius: 10px;
+        }
+        .talk {
+            position: relative;
+            align-items: center;
+        }
+        .shade {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0.7;
+            background-color: black;
+            z-index: 10;
+        }
+
+        #closebtn {
+            width: 100px;
+            height: 40px;
+            background: red;
+            border-radius: 5px;
+            color: white;
+            margin: auto;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .header ,.body{
+            display: block;
+            border-bottom: 1px solid black;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="model hide">
+    <div class="talk">
+        <div class="header">
+            <h3>题目</h3>
+        </div>
+        <div class="body">
+            <p>输入的内容</p>
+        </div>
+        <div class="footer">
+            <button id="closebtn">close</button>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium amet asperiores aut blanditiis consequatur
+        culpa dolore ducimus explicabo facilis fuga illum itaque labore laboriosam magnam minus natus neque nesciunt
+        omnis optio perspiciatis possimus praesentium ratione rerum sint sit tenetur totam unde, vel, veniam veritatis
+        vero.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus excepturi iure odio! Animi aperiam architecto,
+        dicta eos inventore porro quam quas voluptatum? Aliquid aspernatur autem error explicabo illo, in ipsam itaque
+        iusto laborum, maxime minima necessitatibus nobis quia recusandae reiciendis vero voluptates? Animi, esse,
+        maxime.
+
+    </p>
+    <button id="button">点击激活模块框</button>
+
+    <div class="shade hide" id="block"></div>
+
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+        $("#button").click(function () {
+            let h = $(".hide");
+            h.fadeIn(200);
+            h.removeClass('hide');
+        });
+
+        $("#closebtn").click(function () {
+            $('.model,.shade').addClass('hide');
+            $('.model,.shade').fadeOut(500);
+        })
+
+        $("#block").click(function () {
+            $('.model,.shade').addClass('hide');
+            $('.model,.shade').fadeOut(500);
+        })
+
+</script>
+</body>
+
+</html>
